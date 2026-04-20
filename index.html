@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intervo — подготовка к техническим интервью</title>
-  <meta name="description" content="Практика технических интервью по мобильной разработке. Mock-сессии, разбор ответов, работа со слабыми местами.">
+  <title>Intervo — практика технических интервью для мобильных разработчиков</title>
+  <meta name="description" content="Mock-интервью по мобильной разработке с детальным разбором. Находим слабые места, улучшаем структуру ответов, готовим к реальным собеседованиям.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -21,9 +21,9 @@
       </a>
       <div class="nav__links">
         <a href="#audience" class="nav__link">Для кого</a>
-        <a href="#formats" class="nav__link">Форматы</a>
-        <a href="#pricing" class="nav__link">Цены</a>
-        <a href="#cta" class="btn btn--sm">Пройти интервью</a>
+        <a href="#how" class="nav__link">Как это работает</a>
+        <a href="#pricing" class="nav__link">Форматы</a>
+        <a href="#cta" class="btn btn--sm">Записаться на сессию</a>
       </div>
     </div>
   </nav>
@@ -34,66 +34,80 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="hero__badge">Подготовка к mobile interviews — без инфошума и обещаний офферов</p>
-          <h1 class="hero__title">Спокойная, структурная подготовка к&nbsp;техническим интервью</h1>
+          <h1 class="hero__title">Mock-интервью по мобильной разработке с&nbsp;разбором каждого ответа</h1>
           <p class="hero__lead serif">
-            На уровне стажёра, junior и&nbsp;middle проблема почти никогда не&nbsp;только в&nbsp;знаниях. 
-            Обычно это сочетание: что-то ещё не&nbsp;до&nbsp;конца понятно — и&nbsp;при этом нет опыта уверенно 
-            отвечать в&nbsp;формате реального интервью.
+            Большинство отказов — не потому что вы чего-то не знаете. 
+            А потому что ответ звучит коротко, без структуры, без глубины. 
+            Интервьюер видит «читал, но&nbsp;не&nbsp;применял» — даже если вы применяли.
           </p>
           <p class="hero__meta">
-            Intervo — это практика технических интервью по мобильной разработке: mock&#8209;сессии, разбор ответов 
-            и&nbsp;работа с&nbsp;повторяющимися слабыми местами. С&nbsp;фокусом на реальный навык прохождения интервью.
+            Я провожу mock-интервью и разбираю каждый ответ: где именно он&nbsp;теряет в&nbsp;глубине, 
+            почему и как перестроить. iOS, Android. Для junior и&nbsp;middle.
           </p>
-          <div class="hero__audience-hint">
-            <strong>Стажёры и junior</strong> — готовятся к первым серьёзным интервью.<br>
-            <strong>Middle</strong> — хотят отвечать сильнее, глубже и спокойнее.
-          </div>
           <div class="hero__actions">
-            <a href="#cta" class="btn btn--primary">Пройти пробное интервью</a>
-            <a href="#demo" class="btn btn--outline">Посмотреть формат</a>
+            <a href="#cta" class="btn btn--primary">Записаться на сессию</a>
+            <a href="#demo" class="btn btn--outline">Посмотреть разбор</a>
           </div>
-          <p class="hero__footnote">
-            Первое интервью можно использовать как точную диагностику: увидеть, где не хватает структуры, 
-            где ответ звучит поверхностно и какие темы требуют доработки.
-          </p>
         </div>
 
         <div class="hero__card panel">
           <div class="hero__card-header">
-            <span class="hero__card-label">Пример формата</span>
+            <span class="hero__card-label">Реальный фрагмент сессии</span>
             <div class="hero__card-chips">
-              <span class="chip">Mock interview</span>
-              <span class="chip">Разбор</span>
+              <span class="chip">iOS</span>
+              <span class="chip">Memory</span>
             </div>
           </div>
 
           <div class="dialog">
             <div class="dialog__bubble dialog__bubble--question">
-              <span class="dialog__role">Вопрос</span>
-              Что такое retain cycle в iOS и почему он возникает?
+              <span class="dialog__role">Интервьюер</span>
+              Что такое retain cycle и почему он возникает?
             </div>
             <div class="dialog__bubble dialog__bubble--answer">
-              <span class="dialog__role">Ответ кандидата</span>
-              Это когда два объекта держат друг друга сильными ссылками и память из-за этого не освобождается.
+              <span class="dialog__role">Кандидат</span>
+              Это когда два объекта держат друг друга сильными ссылками и память не освобождается.
             </div>
             <div class="dialog__bubble dialog__bubble--feedback">
               <span class="dialog__role">Разбор</span>
-              База ответа есть, но не раскрыта причина на уровне ARC. Нет примера из практики, 
-              не показано, как проблему обычно ищут и как её исправляют.
+              Определение верное, но это весь ответ. Нет ARC, нет примера из проекта, не показано 
+              как нашёл бы утечку и что сделал бы. Выглядит как «читал, но не сталкивался».
             </div>
           </div>
 
           <div class="hero__card-footer">
             <div class="micro-card">
-              <p class="micro-card__label">Что видно сразу</p>
-              <p>Термин знаком, но ответ не показывает глубину понимания и реальный опыт.</p>
+              <p class="micro-card__label">Проблема</p>
+              <p>Знание есть, но ответ не показывает глубину.</p>
             </div>
             <div class="micro-card">
-              <p class="micro-card__label">Следующий шаг</p>
-              <p>Собрать ответ по структуре: определение → причина → пример → диагностика → решение.</p>
+              <p class="micro-card__label">Как исправить</p>
+              <p>Определение → механизм ARC → пример → как нашёл → как починил.</p>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About — who is behind this -->
+    <section class="section section--muted" id="about">
+      <div class="container about-prose">
+        <h2 class="section__title">Зачем я&nbsp;это делаю</h2>
+        <div class="about-prose__text serif">
+          <p>
+            Я&nbsp;мобильный разработчик. Провожу технические интервью и&nbsp;вижу одно и&nbsp;то&nbsp;же: 
+            кандидат знает тему, но ответ звучит слабо. Коротко, без структуры, без примеров. 
+            Интервьюер не&nbsp;может додумать за&nbsp;кандидата — он&nbsp;оценивает то, что слышит.
+          </p>
+          <p>
+            Проблема не в знаниях. Проблема в&nbsp;том, что никто не&nbsp;учит <em>отвечать</em>. 
+            Не зубрить, не&nbsp;хакать процесс — а&nbsp;нормально раскрывать тему вслух, 
+            в&nbsp;темпе живого разговора, под уточняющими вопросами.
+          </p>
+          <p>
+            Intervo — это именно про это. Без курсов, без обещаний офферов, без инфобизнеса. 
+            Mock-интервью, разбор, конкретные рекомендации.
+          </p>
         </div>
       </div>
     </section>
@@ -101,63 +115,51 @@
     <!-- Audience -->
     <section class="section" id="audience">
       <div class="container">
-        <p class="eyebrow">Для кого это</p>
-        <h2 class="section__title">Один формат, две точки входа</h2>
-        <p class="section__sub">
-          Внутри важно сразу понять, узнаёшь ли ты свою ситуацию. Две аудитории — две разные задачи.
-        </p>
+        <h2 class="section__title">Для кого</h2>
 
         <div class="audience-grid">
           <div class="audience-card">
-            <span class="audience-card__kicker">Стажёр / Junior</span>
-            <h3 class="audience-card__title">Первые серьёзные интервью</h3>
+            <span class="audience-card__kicker">Junior</span>
+            <h3 class="audience-card__title">Читал, но&nbsp;на&nbsp;интервью объяснить не&nbsp;могу</h3>
             <ul class="check-list">
-              <li>Какие-то темы пока не до конца понятны, и это становится видно на собеседовании.</li>
-              <li>Даже знакомую тему сложно объяснить спокойно, по шагам, без провалов в логике.</li>
-              <li>Нет опыта «живого» интервью — тяжело оценить свой текущий уровень.</li>
-              <li>После отказа неясно, что подтянуть: знания, глубину или формат ответа.</li>
+              <li>Знаешь тему — но на интервью ответ разваливается, как только просят уточнить.</li>
+              <li>Непонятно, что слабое: сами знания или то, как ты их подаёшь.</li>
+              <li>Нет опыта настоящих собеседований — не понимаешь, чего от тебя ждут.</li>
+              <li>Получаешь отказы без объяснений. Нечего исправлять, потому что нечего анализировать.</li>
             </ul>
           </div>
 
           <div class="audience-card">
             <span class="audience-card__kicker">Middle</span>
-            <h3 class="audience-card__title">Знания есть, ответы не дожимаются</h3>
+            <h3 class="audience-card__title">Знаю глубже, чем звучу на интервью</h3>
             <ul class="check-list">
-              <li>Материал знаком, но на интервью ответ звучит недостаточно глубоко или слишком коротко.</li>
-              <li>Не хватает структуры, ясности и уверенного темпа под давлением.</li>
-              <li>Сложно показать реальный уровень, хотя по ощущениям база уже есть.</li>
-              <li>Интервью проходят неровно: где-то сильно, а где-то неожиданно проседаешь.</li>
+              <li>Опыт есть, но ответ на интервью получается поверхностный или слишком короткий.</li>
+              <li>Под давлением теряешь мысль, начинаешь прыгать по темам.</li>
+              <li>Одно интервью — сильно, следующее — провал. Нет стабильности.</li>
+              <li>Ощущение, что интервьюер видит уровень ниже, чем он есть на самом деле.</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Approach -->
-    <section class="section section--muted">
+    <!-- How it works — compact -->
+    <section class="section section--muted" id="how">
       <div class="container approach-grid">
         <div>
-          <p class="eyebrow">Подход</p>
-          <h2 class="section__title">Понятная рабочая практика вместо «подтянуть всё подряд»</h2>
+          <h2 class="section__title">Что происходит на сессии</h2>
           <p class="section__sub">
-            Здесь не продаётся идея «стань идеальным кандидатом за неделю». 
-            Вместо этого — спокойная работа с форматом интервью: как ты отвечаешь, где теряешься 
-            и как сделать следующий ответ сильнее.
+            Это не тест и не коучинг. Это 60&nbsp;минут в формате, максимально близком 
+            к&nbsp;реальному техническому интервью. С разбором после.
           </p>
-          <ul class="check-list check-list--spaced">
-            <li><strong>Стажёры и junior:</strong> помогает увидеть пробелы в базе и научиться собирать ответ с нуля.</li>
-            <li><strong>Middle:</strong> усиливает структуру, глубину и качество ответа в формате реального диалога.</li>
-            <li><strong>Для всех:</strong> превращает подготовку из хаотичной в понятную и повторяемую.</li>
-          </ul>
         </div>
 
         <div class="steps-card panel">
-          <h3 class="steps-card__title">Как проходит работа</h3>
           <ol class="steps-list">
-            <li>Ты проходишь интервью в темпе, близком к реальному процессу.</li>
-            <li>Получаешь разбор не по принципу «правильно / неправильно», а по качеству и зрелости ответа.</li>
-            <li>Фиксируются повторяющиеся слабые места и формируется понятный следующий шаг.</li>
-            <li>Дальше — через новые mock&#8209;сессии или самостоятельную AI&#8209;практику между ними.</li>
+            <li>Интервью в реальном темпе — вопросы, уточнения, давление. Как в компании.</li>
+            <li>Разбор каждого ответа: что сильно, что слабо, чего не хватило.</li>
+            <li>Фиксирую паттерны — повторяющиеся ошибки, которые вы сами не замечаете.</li>
+            <li>Письменный фидбек и конкретный план: что доучить, что переструктурировать.</li>
           </ol>
         </div>
       </div>
@@ -166,11 +168,11 @@
     <!-- Demo -->
     <section class="section" id="demo">
       <div class="container">
-        <p class="eyebrow">Пример формата</p>
-        <h2 class="section__title">Полезный разбор вместо формальной оценки</h2>
+        <h2 class="section__title">Как выглядит разбор</h2>
         <p class="section__sub">
-          Сильная подготовка начинается там, где становится видно не просто ошибку, а её природу: 
-          знаний не хватает, ответа не хватает, или не хватает структуры и спокойствия.
+          Не «правильно / неправильно». Важно понять, почему ответ звучит слабо: 
+          пробел в знаниях, плохая структура или не умеешь раскрыть тему 
+          под уточняющими вопросами. Это три разные проблемы с разными решениями.
         </p>
 
         <div class="demo panel">
@@ -179,80 +181,102 @@
             <p class="demo__text">Что такое retain cycle в iOS и почему он возникает?</p>
           </div>
           <div class="demo__block demo__block--answer">
-            <p class="demo__label">Ответ кандидата</p>
+            <p class="demo__label">Кандидат</p>
             <p class="demo__text">
               Это когда два объекта ссылаются друг на друга сильными ссылками, 
               и память из-за этого не освобождается.
             </p>
           </div>
           <div class="demo__block demo__block--feedback">
-            <p class="demo__label">Разбор</p>
+            <p class="demo__label">Что с этим ответом не так</p>
             <p class="demo__text">
-              Ответ содержит правильную базу, но не раскрывает механизм ARC, не показывает практический 
-              опыт и не демонстрирует, как кандидат думает о диагностике и исправлении проблемы. 
-              Для интервью это звучит слишком коротко и не показывает уровень глубины.
+              Определение верное. Но это <em>весь</em> ответ. Нет механизма ARC — почему именно 
+              сильные ссылки это создают. Нет примера из реального проекта. 
+              Не показано, как кандидат искал бы такую утечку и что делал бы.
+            </p>
+            <p class="demo__text" style="margin-top: 12px;">
+              Интервьюер слышит: «видел в статье, но сам не сталкивался». 
+              Даже если сталкивался — ответ этого не показывает.
+            </p>
+          </div>
+          <div class="demo__block demo__block--recommendation">
+            <p class="demo__label">Как ответить сильнее</p>
+            <p class="demo__text">
+              <strong>Что это</strong> → <strong>почему</strong> (ARC, reference counting) → 
+              <strong>пример</strong> (delegate без weak, closure capture) → <strong>как нашёл</strong> (Instruments, Memory Graph) → 
+              <strong>как починил</strong> (weak/unowned). Два предложения превращаются в ответ, 
+              который показывает и&nbsp;понимание, и&nbsp;практику.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Results -->
-    <section class="section section--muted" id="formats">
-      <div class="container results-grid">
-        <div>
-          <p class="eyebrow">Что меняется</p>
-          <h2 class="section__title">Более собранные ответы, более понятная подготовка</h2>
-          <ul class="check-list check-list--spaced">
-            <li><strong>Стажёры и junior:</strong> становится понятнее, как отвечать, где не хватает базы и как выстроить подготовку без хаоса.</li>
-            <li><strong>Middle:</strong> ответы становятся глубже, спокойнее и лучше держат реальный темп интервью.</li>
-            <li><strong>Для всех:</strong> уходит ощущение случайности, появляется понятный следующий шаг.</li>
-            <li>Подготовка перестаёт быть набором случайных действий и становится системной.</li>
-          </ul>
+    <!-- Why this works long-term -->
+    <section class="section section--muted">
+      <div class="container about-prose">
+        <h2 class="section__title">Почему это работает</h2>
+        <div class="about-prose__text serif">
+          <p>
+            Готовиться к «конкретному интервью» — лотерея. Попались знакомые вопросы — повезло. 
+            Не попались — нет. Зависеть от везения неприятно, и&nbsp;это не масштабируется.
+          </p>
+          <p>
+            Здесь другой подход: тренируется не набор ответов, а&nbsp;умение отвечать. 
+            Структурно, на&nbsp;нужной глубине, спокойно. Это навык — он&nbsp;остаётся и&nbsp;работает 
+            на каждом следующем интервью, вне зависимости от вопросов.
+          </p>
+          <p>
+            После нескольких сессий слабые места закрываются, структура ответа становится привычкой, 
+            а интервью перестаёт быть стрессом. Остаётся рабочая задача.
+          </p>
         </div>
-        <blockquote class="testimonial serif">
-          «Самое полезное — не просто услышать, что ответ слабый, а понять, 
-          <em>почему</em> он слабый и как именно сделать его сильнее на следующей сессии.»
-          <cite>— место для реального отзыва</cite>
-        </blockquote>
       </div>
     </section>
 
     <!-- Pricing -->
     <section class="section" id="pricing">
       <div class="container">
-        <p class="eyebrow">Форматы работы</p>
-        <h2 class="section__title">Начни с одной сессии — пойми, нужен ли более глубокий формат</h2>
+        <h2 class="section__title">Форматы</h2>
 
         <div class="pricing-grid">
           <div class="pricing-card">
             <h3 class="pricing-card__name">AI Practice</h3>
             <p class="pricing-card__desc">
-              Самостоятельная тренировка с повторением вопросов и базовым фидбеком между основными сессиями.
+              Самостоятельная тренировка между сессиями. Вопросы по вашим слабым темам, 
+              базовый фидбек. Чтобы не&nbsp;терять форму и&nbsp;закреплять структуру ответа.
             </p>
             <div class="pricing-card__price">от&nbsp;€20<span>/мес</span></div>
             <hr class="pricing-card__divider">
-            <p class="pricing-card__note">Подходит для регулярной практики и закрепления структуры ответа.</p>
+            <p class="pricing-card__note">Дополнение к mock-интервью, не замена.</p>
           </div>
 
           <div class="pricing-card pricing-card--featured">
             <h3 class="pricing-card__name">Mock Interview</h3>
             <p class="pricing-card__desc">
-              Индивидуальное интервью с разбором, рекомендациями и понятным следующим шагом подготовки.
+              Одно полноценное техническое интервью + разбор. 
+              Вопросы, уточнения, давление — как на реальном собеседовании. 
+              После — письменный фидбек по каждому ответу.
             </p>
             <div class="pricing-card__price">от&nbsp;€100<span>/сессия</span></div>
             <hr class="pricing-card__divider">
-            <p class="pricing-card__note">Лучший формат, чтобы быстро увидеть уровень и слабые места.</p>
+            <ul class="pricing-card__features">
+              <li>~60 минут: интервью + разбор</li>
+              <li>Письменный фидбек по каждому ответу</li>
+              <li>Список слабых мест и что с ними делать</li>
+            </ul>
+            <p class="pricing-card__note">Начните с этого. Одной сессии хватает для полной картины.</p>
           </div>
 
           <div class="pricing-card">
-            <h3 class="pricing-card__name">Preparation Program</h3>
+            <h3 class="pricing-card__name">Серия сессий</h3>
             <p class="pricing-card__desc">
-              Серия интервью и системная работа по слабым местам в течение 2–3 недель.
+              3–5 интервью за 2–3 недели. Каждая сессия строится на&nbsp;результатах предыдущей. 
+              Слабые места закрываются последовательно.
             </p>
             <div class="pricing-card__price">от&nbsp;€300<span>/программа</span></div>
             <hr class="pricing-card__divider">
-            <p class="pricing-card__note">Для тех, кому нужен не разовый разбор, а цельная подготовка.</p>
+            <p class="pricing-card__note">Для подготовки к конкретным собеседованиям в ближайшие недели.</p>
           </div>
         </div>
       </div>
@@ -263,16 +287,14 @@
       <div class="container">
         <div class="cta-block panel">
           <div class="cta-block__content">
-            <p class="eyebrow">Следующий шаг</p>
-            <h2 class="section__title">Начать можно с одного интервью</h2>
+            <h2 class="section__title">Напишите, чтобы записаться</h2>
             <p class="section__sub">
-              Этого достаточно, чтобы понять свой текущий уровень, увидеть повторяющиеся слабые места 
-              и решить, нужен ли дальнейший формат подготовки — независимо от грейда.
+              Одной сессии достаточно, чтобы понять, где вы&nbsp;сейчас 
+              и&nbsp;что конкретно стоит изменить в&nbsp;ответах.
             </p>
           </div>
           <div class="cta-block__action">
-            <a href="mailto:hello@intervo.dev" class="btn btn--primary btn--lg">Записаться на интервью</a>
-            <span class="cta-block__contact">hello@intervo.dev</span>
+            <a href="mailto:hello@intervo.dev" class="btn btn--primary btn--lg">hello@intervo.dev</a>
           </div>
         </div>
       </div>
@@ -286,7 +308,7 @@
         <span class="nav__mark"></span>
         intervo.dev
       </span>
-      <span class="footer__copy">Подготовка к техническим интервью для мобильных разработчиков</span>
+      <span class="footer__copy">Практика технических интервью для мобильных разработчиков</span>
     </div>
   </footer>
 
