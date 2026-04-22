@@ -790,6 +790,69 @@ a { color: inherit; }
   font-style: italic;
 }
 
+/* ===== Method Grid ===== */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.method-card {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.method-card__number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.method-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.method-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+/* ===== Expect Grid ===== */
+.expect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.expect-card {
+  padding: 24px;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border-light);
+}
+
+.expect-card strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
+
 /* ===== Pricing Features ===== */
 .pricing-card__features {
   list-style: none;
@@ -825,6 +888,14 @@ a { color: inherit; }
   .approach-grid,
   .results-grid,
   .cta-block {
+    grid-template-columns: 1fr;
+  }
+
+  .method-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .expect-grid {
     grid-template-columns: 1fr;
   }
 
@@ -865,6 +936,11 @@ a { color: inherit; }
 
   .container {
     padding: 0 20px;
+  }
+
+  .method-grid,
+  .expect-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero {
