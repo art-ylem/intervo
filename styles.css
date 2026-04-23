@@ -223,12 +223,13 @@ a { color: inherit; }
 /* ===== Hero ===== */
 .hero {
   padding: 80px 0 56px;
+  position: relative;
 }
 
 .hero__grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
+  gap: 56px;
   align-items: start;
 }
 
@@ -256,7 +257,7 @@ a { color: inherit; }
 
 .hero__lead {
   font-size: 20px;
-  line-height: 1.6;
+  line-height: 1.75;
   color: #3a362f;
   margin-bottom: 20px;
   max-width: 560px;
@@ -264,7 +265,7 @@ a { color: inherit; }
 
 .hero__meta {
   font-size: 16px;
-  line-height: 1.65;
+  line-height: 1.75;
   color: var(--color-text-secondary);
   margin-bottom: 24px;
   max-width: 560px;
@@ -278,6 +279,18 @@ a { color: inherit; }
   margin-top: 32px;
 }
 
+.hero__content .steps-list {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  max-width: 560px;
+  gap: 14px;
+}
+
+.hero__content .steps-list li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 .hero__footnote {
   font-size: 14px;
   line-height: 1.6;
@@ -289,7 +302,19 @@ a { color: inherit; }
 
 /* Hero Card */
 .hero__card {
-  padding: 28px;
+  padding: 30px;
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(74, 107, 84, 0.08);
+  border-color: #d9e4dd;
+  position: relative;
+}
+
+.hero__card::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: calc(var(--radius-lg) - 8px);
+  border: 1px dashed rgba(74, 107, 84, 0.18);
+  pointer-events: none;
 }
 
 .hero__card-header {
@@ -319,7 +344,7 @@ a { color: inherit; }
 /* Dialog */
 .dialog {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 24px;
 }
 
@@ -327,24 +352,31 @@ a { color: inherit; }
   padding: 16px 20px;
   border-radius: var(--radius-md);
   font-size: 14px;
-  line-height: 1.6;
+  line-height: 1.7;
   border: 1px solid var(--color-border-light);
   background: var(--color-surface-warm);
+  box-shadow: var(--shadow-xs);
+}
+
+.dialog__bubble strong {
+  color: #253a2d;
 }
 
 .dialog__bubble--question {
-  background: var(--color-surface);
+  background: #ffffff;
+  border-color: #d7ddd8;
 }
 
 .dialog__bubble--answer {
   margin-left: 12%;
-  background: var(--color-warm);
-  border-color: var(--color-border);
+  background: #f8f3ea;
+  border-color: #e0d4c1;
 }
 
 .dialog__bubble--feedback {
-  background: var(--color-feedback-bg);
-  border-color: var(--color-feedback-border);
+  background: #edf5ef;
+  border-color: #c9ddcf;
+  border-left: 4px solid var(--color-accent);
 }
 
 .dialog__role {
@@ -383,6 +415,16 @@ a { color: inherit; }
 /* ===== Sections ===== */
 .section {
   padding: var(--section-gap) 0;
+  position: relative;
+}
+
+.section + .section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 32px;
+  right: 32px;
+  border-top: 1px solid var(--color-border-light);
 }
 
 .section--muted {
@@ -546,7 +588,7 @@ a { color: inherit; }
 }
 
 .steps-list li::before {
-  content: counter(steps);
+  content: '→';
   flex-shrink: 0;
   width: 28px;
   height: 28px;
@@ -554,10 +596,10 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--color-accent-subtle);
-  color: var(--color-accent);
+  background: #f2f6f2;
+  color: #355342;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   border: 1px solid var(--color-feedback-border);
 }
 
@@ -565,6 +607,7 @@ a { color: inherit; }
 .demo {
   padding: 32px;
   margin-top: 40px;
+  box-shadow: var(--shadow-md);
 }
 
 .demo__block {
@@ -587,6 +630,11 @@ a { color: inherit; }
 .demo__block--feedback {
   background: var(--color-feedback-bg);
   border-color: var(--color-feedback-border);
+  position: relative;
+}
+
+.demo__block--feedback .demo__label::before {
+  content: '⚠ ';
 }
 
 .demo__block--recommendation {
@@ -658,16 +706,24 @@ a { color: inherit; }
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
 }
 
 .pricing-card--featured {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-md), 0 0 0 1px var(--color-accent);
   position: relative;
+  transform: scale(1.05);
+  z-index: 2;
 }
 
 .pricing-card--featured::before {
-  content: 'Рекомендуем';
+  content: 'Лучший первый шаг';
   position: absolute;
   top: -11px;
   left: 24px;
@@ -678,6 +734,15 @@ a { color: inherit; }
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.04em;
+}
+
+.pricing-card:first-child {
+  background: #fff;
+}
+
+.pricing-card:last-child {
+  background: #fbf8f2;
+  border-color: #e7dccb;
 }
 
 .pricing-card__name {
@@ -870,12 +935,21 @@ a { color: inherit; }
 }
 
 .pricing-card__features li::before {
-  content: '✓';
+  content: '✔';
   position: absolute;
   left: 0;
   color: var(--color-accent);
   font-weight: 700;
   font-size: 12px;
+}
+
+.pricing-card__action {
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.pricing-card__action .btn {
+  width: 100%;
 }
 
 /* ===== Responsive ===== */
@@ -910,6 +984,10 @@ a { color: inherit; }
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
+  }
+
+  .pricing-card--featured {
+    transform: none;
   }
 
   .audience-grid {
@@ -971,6 +1049,11 @@ a { color: inherit; }
     grid-template-columns: 1fr;
   }
 
+  .section + .section::before {
+    left: 20px;
+    right: 20px;
+  }
+
   .pricing-grid {
     max-width: 100%;
   }
@@ -979,6 +1062,55 @@ a { color: inherit; }
     padding: 28px;
   }
 
+
+/* ===== Method Timeline ===== */
+#method .method-grid {
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 44px;
+  position: relative;
+  padding-left: 36px;
+  max-width: 900px;
+}
+
+#method .method-grid::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 14px;
+  width: 2px;
+  background: linear-gradient(to bottom, #bfd0c4, #dfe8e2);
+}
+
+#method .method-card {
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  padding: 26px 24px 24px 28px;
+}
+
+#method .method-card__number {
+  position: absolute;
+  left: -38px;
+  top: 24px;
+  width: 36px;
+  height: 36px;
+  font-size: 15px;
+  background: #e8f0eb;
+  border: 1px solid #c8d9ce;
+}
+
+@media (max-width: 680px) {
+  #method .method-grid {
+    padding-left: 30px;
+    gap: 20px;
+  }
+
+  #method .method-card__number {
+    left: -34px;
+    top: 20px;
+  }
+}
   .cta-block__action {
     align-items: stretch;
   }
