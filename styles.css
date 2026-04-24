@@ -226,6 +226,10 @@ a { color: inherit; }
   position: relative;
 }
 
+.hero .container {
+  max-width: none;
+}
+
 .hero__grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -531,7 +535,7 @@ a { color: inherit; }
 /* ===== Outcome Grid ===== */
 .outcome-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
@@ -632,8 +636,8 @@ a { color: inherit; }
 }
 
 .demo__block--feedback {
-  background: var(--color-feedback-bg);
-  border-color: var(--color-feedback-border);
+  background: #f9f1f0;
+  border-color: #e8c8c2;
   position: relative;
 }
 
@@ -862,16 +866,37 @@ a { color: inherit; }
 /* ===== Method Grid ===== */
 .method-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 34px;
   margin-top: 40px;
+  max-width: 820px;
 }
 
 .method-card {
+  position: relative;
   padding: 24px;
   border-radius: var(--radius-md);
   background: var(--color-surface);
   border: 1px solid var(--color-border);
+}
+
+.method-card:not(:last-child)::after {
+  content: '↓';
+  position: absolute;
+  left: 50%;
+  bottom: -24px;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid var(--color-feedback-border);
+  background: #f2f6f2;
+  color: #355342;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .method-card__number {
@@ -969,10 +994,6 @@ a { color: inherit; }
     grid-template-columns: 1fr;
   }
 
-  .method-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .expect-grid {
     grid-template-columns: 1fr;
   }
@@ -1066,55 +1087,6 @@ a { color: inherit; }
     padding: 28px;
   }
 
-
-/* ===== Method Timeline ===== */
-#method .method-grid {
-  grid-template-columns: 1fr;
-  gap: 28px;
-  margin-top: 44px;
-  position: relative;
-  padding-left: 36px;
-  max-width: 900px;
-}
-
-#method .method-grid::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 14px;
-  width: 2px;
-  background: linear-gradient(to bottom, #bfd0c4, #dfe8e2);
-}
-
-#method .method-card {
-  position: relative;
-  box-shadow: var(--shadow-sm);
-  padding: 26px 24px 24px 28px;
-}
-
-#method .method-card__number {
-  position: absolute;
-  left: -38px;
-  top: 24px;
-  width: 36px;
-  height: 36px;
-  font-size: 15px;
-  background: #e8f0eb;
-  border: 1px solid #c8d9ce;
-}
-
-@media (max-width: 680px) {
-  #method .method-grid {
-    padding-left: 30px;
-    gap: 20px;
-  }
-
-  #method .method-card__number {
-    left: -34px;
-    top: 20px;
-  }
-}
   .cta-block__action {
     align-items: stretch;
   }
