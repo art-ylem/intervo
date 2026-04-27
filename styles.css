@@ -301,6 +301,11 @@ a { color: inherit; }
   max-width: none;
 }
 
+.section__sub--full-width {
+  width: 100%;
+  max-width: none;
+}
+
 .hero__content .steps-list li {
   font-size: 14px;
   line-height: 1.5;
